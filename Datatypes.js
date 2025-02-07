@@ -21,3 +21,5 @@ let bInt = 123456n; // bigInt
 
 console.table([typeof(name),typeof(age), typeof(isMarried), typeof(nullish), 
     typeof(undef), typeof(sym), typeof(bInt)])
+
+
