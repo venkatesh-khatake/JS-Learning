@@ -8,7 +8,13 @@ city = "Pune";
 accountEmail = "abc@gmail.com";
 accountPassword = "555555";
 city = "PCMC";
-console.log(accountId);
+// console.log(accountId);
+
+let name = "Venkey";
+let lName = "Khatake"
+
+console.log(name.toUpperCase())
+
 
 //01.  What is Variable?
 //  Ans : The Variables are like a container to store a different type of data.
@@ -30,4 +36,4 @@ console.log(accountId);
 
 
 
-console.table([accountId,accountEmail,accountPassword,city]);
+// console.table([accountId,accountEmail,accountPassword,city]);
