@@ -39,12 +39,44 @@
 // console.log("Four")
 
 
-function sum(a,b){
-    console.log(a + b);
-}
+// function sum(a,b){
+//     console.log(a + b);
+// }
 
-function calc(a,b, callback){
-    callback(a,b);
-}
+// function calc(a,b, callback){
+//     callback(a,b);
+// }
 
-calc(4,5, sum)
+// calc(4,5, sum)
+
+// for(let i = 0; i < 5; i++){
+//     let str = "";
+//     for(let j = 0; j < 5; j++){
+//         str = str + j;
+//     }
+//     console.log(str)
+// }
+
+
+// function getData(dataId, getNextData){
+//     setTimeout(() =>{
+//         console.log("Data ID : "+dataId);
+//         if(getNextData){
+//             getNextData();
+//         }
+//     },2000)
+// }
+// getData(1, () =>{
+//     getData(2, ()=>{
+//         getData(3, () =>{
+//             getData(4)
+//         })
+//     })
+// })
+
+// let promise = new Promise((resolve, reject) =>{
+//     console.log("I am promise");
+//     resolve("Resolved");
+//     reject("Rejected");
+// })
+
