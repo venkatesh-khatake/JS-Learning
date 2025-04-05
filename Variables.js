@@ -10,6 +10,13 @@ let name = "Venkatesh";
         var age = 22;
         // function scope : when we declare a variable inside the function using var keyword. 
         // it is only accessible within that function. we cant access it outside the function.
+        //Example : 
+
+            function displaySum(){
+                var sum = 4 + 5;
+            }
+
+            // console.log(sum);   // throws ReferenceError : sum is not defined
 
         // globally scope : global scope  means we can access a variable anywhere in the program. 
 
@@ -32,11 +39,22 @@ let name = "Venkatesh";
 
 
 
-// 3. const : const introduced in ES6 version. it has a block scope and it must be initialized during declaration. we can't reassign a value to it.
+// 3. const : const means constant,it was introduced in ES6 version. it has a block scope and it must be initialized during declaration. we can't reassign a value to it.
 
-        const pi = 3.14;
+        const _pi = 3.14;
+        console.log(_pi)
         // pi = 114    // throws TypeError
 
 
     
         
+
+// Rules for Declaring Variable : 
+// 1. we can't start a variable name with a number.
+// 2. we can't use a special keyword as a variable name.
+// 3. we can't use a space in a variable name.
+// 4. we can't use a special character in a variable name.
+// 5. we can't use a reserved keyword as a variable name.
+// variable name must start with character, $(dollar) or (_)hyphen
+// 6. we can't use a variable name that is same as a function name.
+// 7. variable name must be meaningful.
