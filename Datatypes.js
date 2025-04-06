@@ -12,10 +12,11 @@
 // these are stored directly in memory and have fixed size.
 
 // primitive data types have 7 types : 
-// 1. number
-// 2. string
-// 3. boolean
-// 4. null
-// 5. undefined
-// 6. symbol
-// 7. BigInt
+// 1. number : it holds an integer or floating point numbers
+// 2. string : it's a holds a sequence of characters.
+// 3. boolean : it has only two values that is "true" and "false".
+// 4. null : null means Intensionally no value, if we don't want to store 
+//           a value to a variable in that case we will use "null".
+// 5. undefined : undefined means we declared a variable but not assigned.
+// 6. symbol : This is used to represent unique values that can be used as identifiers or key in objects.
+// 7. BigInt : it is useful for bigger numbers
