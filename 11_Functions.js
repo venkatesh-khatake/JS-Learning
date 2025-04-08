@@ -40,9 +40,35 @@ console.log(addition(4,3));
 
 // for Example : 
 
-let greet = () =>{
-    console.log("Hello World");
-}
-greet()
+// let greet = () =>{
+//     console.log("Hello World");
+// }
+// greet()
 
+
+// ========================================
+
+//Find Factorial
+
+// let num = 5;
+// let factorial = 1;
+// for(let i = 1; i <= num ; i++){
+//     factorial = factorial * i;
+// }
+// console.log(factorial);
+
+
+// ========================================
+
+// convert celsius to fahrenheit;
+
+// function convertToFahrenheit(c){
+//     let fahrenheit = c * 9/5 + 32;
+//     return fahrenheit;
+// }
+// console.log(convertToFahrenheit(34));
+
+// =========================================
+
+// Create a function that returns the maximum of three numbers
 
