@@ -31,3 +31,10 @@ if (true) {
 
     // console.log(z);// it gives error : z is not <defined styleName={}></defined>
 
+
+    console.log(num)
+    console.log("Khatake");
+    console.log("Venkatesh");
+    let num = 14;
+
+    console.log(num);
