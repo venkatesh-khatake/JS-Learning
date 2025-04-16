@@ -233,22 +233,119 @@
 
 // ===================================
 
-let checkEvenOdd = (num)=>{
-  return  new Promise((resolve, reject)=>{
-        if(num % 2 === 0){
-            resolve("Number is Even");
-        }
-        else{
-            reject("Number is Odd");
-        }
-    })
-}
+// let checkEvenOdd = (num)=>{
+//   return  new Promise((resolve, reject)=>{
+//         if(num % 2 === 0){
+//             resolve("Number is Even");
+//         }
+//         else{
+//             reject("Number is Odd");
+//         }
+//     })
+// }
 
-checkEvenOdd(10)
-.then((result)=>{
-    console.log(result);
-})
-.catch((error) =>{
-    console.log("error");
-})
+// checkEvenOdd(10)
+// .then((result)=>{
+//     console.log(result);
+// })
+// .catch((error) =>{
+//     console.log("error");
+// })
 
+
+// ===================================
+
+// Task: Create a promise that resolves with "Hello, Promises!" after 2 seconds.
+
+// let greet = function(){
+//     return new Promise((resolve, reject) =>{
+//         setTimeout(() =>{
+//             resolve("Hello, Promises!");
+//         },2000)
+//     })
+// }
+
+// greet()
+// .then((result) =>{
+//     console.log(result);
+// })
+// =======================================================
+
+// Task: Create a function checkNumber(num) that returns a promise.
+
+//     If num > 10, it should resolve with "Number is big!"
+
+//     Otherwise, reject with "Number is small!"
+
+// let checkNumber = function(num){
+//     return new Promise((resolve, reject) =>{
+//         if(num > 10){
+//             resolve("Number is Big.");
+//         }
+//         else{
+//             reject('Number is small.')
+//         }
+//     })
+// }
+// checkNumber(0)
+// .then((result) =>{
+//     console.log(result);
+// })
+// .catch((error) =>{
+//     console.log(error);
+// })
+
+
+// ===============================================
+
+// let p1 = Promise.resolve("Hello World");
+// // p1.then((res)=> console.log(res))
+
+// let p2 = Promise.resolve("Promise is Resolved")
+// // p2.catch((err)=> console.log(err));
+
+// Promise.all([p1,p2])
+// .then((res) => console.log(res))
+// .catch((err) => console.log(err))
+
+// ================================
+
+// let p1 = new Promise((res) => {
+//     setTimeout(()=>{
+//         res("first");
+//     },1000)
+// })
+
+// let p2 = new Promise((res)=>{
+//     setTimeout(()=>{
+//         res("second");
+//     },500)
+// })
+
+// Promise.race([p1,p2])
+// .then((res) =>{
+//     console.log(res)
+// })
+
+
+
+// const p1 = Promise.resolve("Success 1");
+// const p2 = Promise.reject("Failed 2");
+
+// Promise.allSettled([p1, p2]).then((results) => {
+//   console.log(results);
+// });
+
+
+const p1 = Promise.reject("Failed 1");
+const p2 = Promise.resolve("Success 2");
+const p3 = Promise.resolve("Success 3");
+
+Promise.any([p1, p2, p3]).then((result) => {
+  console.log(result); // Output: "Success 2"
+});
+
+Promise.any([
+    Promise.reject("Error 1"),
+    Promise.reject("Error 2")
+  ]).catch((err) => console.log(err)); 
