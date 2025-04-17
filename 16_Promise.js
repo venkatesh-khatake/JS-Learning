@@ -337,15 +337,54 @@
 // });
 
 
-const p1 = Promise.reject("Failed 1");
-const p2 = Promise.resolve("Success 2");
-const p3 = Promise.resolve("Success 3");
+// const p1 = Promise.reject("Failed 1");
+// const p2 = Promise.resolve("Success 2");
+// const p3 = Promise.resolve("Success 3");
 
-Promise.any([p1, p2, p3]).then((result) => {
-  console.log(result); // Output: "Success 2"
-});
+// Promise.any([p1, p2, p3]).then((result) => {
+//   console.log(result); // Output: "Success 2"
+// });
 
-Promise.any([
-    Promise.reject("Error 1"),
-    Promise.reject("Error 2")
-  ]).catch((err) => console.log(err)); 
+// Promise.any([
+//     Promise.reject("Error 1"),
+//     Promise.reject("Error 2")
+//   ]).catch((err) => console.log(err)); 
+
+
+// You have three promises. Two resolve and one rejects. Use Promise.allSettled() to print the result of each promise.
+
+// const p1 = Promise.resolve("Loaded A");
+// const p2 = Promise.reject("Error B");
+// const p3 = Promise.resolve("Loaded C");
+
+// Promise.allSettled([p1,p2,p3])
+// .then((res) =>{
+//     res.forEach((result) =>{
+//         console.log(result)
+//     })
+// })
+
+// Promise.allSettled([p1,p2,p3])
+// .then((res)=>{
+//     console.log(res)
+// })
+
+// =======================================
+// You have 3 promises. First two reject and the third one resolves. Use Promise.any() to get the first successful result.
+// const p1 = Promise.reject("Not working");
+// const p2 = Promise.reject("Still not working");
+// const p3 = Promise.resolve("Finally works!");
+
+// Promise.any([p1,p2,p3])
+// .then((res)=>{
+//     console.log(res);
+// })
+
+// ======================================
+const p1 = Promise.reject("Fail 1");
+const p2 = Promise.reject("Fail 2");
+const p3 = Promise.reject("Fail 3");
+
+Promise.any([p1,p2,p3])
+.then((res) => console.log(res))
+.catch((err) => console.log("All Failed : ",err))
