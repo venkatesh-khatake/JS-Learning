@@ -5,16 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning JavaScript</title>
     <style>
-        .box{
+        /* .box{
             width: 200px;
             height: 200px;
             border: 2px solid black;
-        }
+        } */
+        .box {
+    width: 200px;
+    height: 100px;
+    background-color: lightgray;
+    margin-bottom: 10px;
+    transition: 0.3s;
+  }
+
+  .active {
+    background-color: limegreen;
+    border: 2px solid black;
+  }
+  .hidden {
+    display: none;
+  }
+  .dark{
+    background-color: black;
+    color: white;
+  }
     </style>
 </head>
 <body>
     
-<h1>JavaScript Learning</h1>
+<!-- <h1>JavaScript Learning</h1>
 <hr>
 <!-- 
 <div id="demo">
@@ -29,18 +48,18 @@
   <button id="greet">Greet</button>
   <p id="greeting"></p> -->
 
-
+<!-- 
   <div class="box"></div>
 <br><br>
   <input type="text" id="myInput" placeholder="Type here..." />
 <br>
 <br>
-  <button id="btn">Click Me</button>
+  <button id="btn">Click Me</button> -->
 
 
   <!-- ============================================= -->
 
-  <div class="box">
+  <!-- <div class="box">
 
   </div>
 
@@ -64,9 +83,29 @@
   <br>
 
   <input type="text" id="input"/>
-  <div id="text"> </div>
+  <div id="text"> </div> --> 
 
 
-    <script src="25_EventHandling.js"></script>
+  <button id="change">Change image</button>
+  <img id="image"/>
+
+  <div class="box" id="myBox"></div>
+<button onclick="toggleBox()">Activate</button>
+
+
+<p id="para">This is a paragraph. Click the button to hide/show me!</p>
+<button onclick="togglePara()">Hide/Show Text</button>
+
+
+<button onclick="toggleMode()">click me</button>
+
+<!-- ============================================== -->
+
+
+<a href="https://www.google.com">Google</a>
+<input type="text" id="keyInput" placeholder="Type something..." />
+
+    <!-- <script src="25_EventHandling.js"></script> -->
+     <script src="24_DOM.js"></script>
 </body>
 </html>
