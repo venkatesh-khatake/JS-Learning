@@ -16,6 +16,7 @@ function outerFunction(){
 const myFunc = outerFunction();
 
 myFunc();
-myFunc();
-myFunc();
-myFunc();
+
+const myFunc2 = myFunc;
+myFunc2();
+myFunc2();
