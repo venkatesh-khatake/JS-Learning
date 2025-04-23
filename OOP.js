@@ -11,24 +11,24 @@
 // objects based on that class.
 
 
-class Person{
-    constructor(name, age){
-        this.name = name;
-        this.age = age;
-    }
+// class Person{
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age;
+//     }
 
-    greet(){
-        console.log(`Hello, my name is ${this.name}, i'm ${this.age} years old`);
-    }
-}
+//     greet(){
+//         console.log(`Hello, my name is ${this.name}, i'm ${this.age} years old`);
+//     }
+// }
 
-const person1 = new Person("Venkatesh", 22);
-person1.greet();
+// const person1 = new Person("Venkatesh", 22);
+// person1.greet();
 
-const personArr = [];
+// const personArr = [];
 
-personArr.push(person1);
-console.log(personArr)
+// personArr.push(person1);
+// console.log(personArr)
 
 // What is Object : 
 // An object is a non-primitive data type, that allows you to 
@@ -52,17 +52,51 @@ console.log(personArr)
 
 // Then, create an object of Student and call the method.
 
-class Student{
-    constructor(name, rollNo){
+// class Student{
+//     constructor(name, rollNo){
+//         this.name = name;
+//         this.rollNo = rollNo
+//     }
+
+//      display(){
+//         console.log(`Name : ${this.name}, Roll No. : ${this.rollNo} `);
+//      }
+// }
+
+// const student1 = new Student('Venkey', 102);
+
+// student1.display()
+
+
+// Inheritance :
+// Inheritance allows a class to inherit properties and methods from 
+// another class, we use 'extends' keyword to inherit class and
+// 'super()' to call the parent class's constructor.
+
+
+class Person{
+    constructor(name, age){
         this.name = name;
-        this.rollNo = rollNo
+        this.age = age;
     }
 
-     display(){
-        console.log(`Name : ${this.name}, Roll No. : ${this.rollNo} `);
-     }
+    showDetails(){
+        console.log(`Name : ${this.name}, Age : ${this.age}`)
+    }
 }
 
-const student1 = new Student('Venkey', 102);
 
-student1.display()
+
+class Student extends Person{
+    constructor(name,age, rollNo){
+        // super(name, age)
+        this.rollNo = rollNo;
+    }
+
+    studentInfo(){
+        console.log(`Student Name : ${this.name}, Age : ${this.age}, Roll NO. : ${this.rollNo}`)
+    }
+}
+
+const student1 = new Student('venkatesh', 22, 102)
+student1.studentInfo();
