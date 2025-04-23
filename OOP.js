@@ -81,7 +81,7 @@ class Person{
     }
 
     showDetails(){
-        console.log(`Name : ${this.name}, Age : ${this.age}`)
+        console.log("My name is Venkey")
     }
 }
 
@@ -89,12 +89,13 @@ class Person{
 
 class Student extends Person{
     constructor(name,age, rollNo){
-        // super(name, age)
+        super(name, age)
         this.rollNo = rollNo;
     }
 
     studentInfo(){
         console.log(`Student Name : ${this.name}, Age : ${this.age}, Roll NO. : ${this.rollNo}`)
+        super.showDetails();
     }
 }
 
