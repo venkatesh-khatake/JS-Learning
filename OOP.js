@@ -101,3 +101,14 @@ class Student extends Person{
 
 const student1 = new Student('venkatesh', 22, 102)
 student1.studentInfo();
+console.log(student1 instanceof Person)
+console.log(student1.constructor);
+
+// instanceof :
+// instanceof operator is used to check the type of an object
+// at run time. it returns the boolean value if true then it 
+// indicates that the object is an instance of a particular 
+// class and if false it is not.
+
+
+console.log(student1 instanceof Person)
