@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .container{
+            width: 70%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+            justify-content: center;
+            background-color: aqua;
+        }
+        .container #text-input{
+            width: 70%;
+            height: 40px;
+            font-size: 20px;
+        }
+        #display{
+            width: 70%;
+            height: 80%;
+            background-color: white;
+            overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    word-break: break-word; /* Wraps long words */
+    white-space: pre-wrap;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <input type="text" placeholder="Enter text here..." id="text-input">
+        <div id="display">
+
+        </div>
+    </div>
+
+
+
+    <script>
+        const text_input = document.getElementById('text-input');
+        const display = document.getElementById('display');
+
+        text_input.addEventListener('input',(event) =>{
+            display.innerText = event.target.value;
+        })
+    </script>
+</body>
+</html>
