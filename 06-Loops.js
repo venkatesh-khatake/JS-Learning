@@ -54,3 +54,13 @@ let arr = [1,2,3,4,5,6];
 for(let [index, val] of arr.entries()){
     console.log("index : "+index +" : " + val )
 }
+
+// for each :
+// for each is a built-in array method that allows iteration over elements in an array or other iterable object.
+//  it provides a callback function once for each element in the array.
+
+let fruits = ["Apple", "Banana", "Grapes", "Mango"];
+
+fruits.forEach(function(fruit, index){
+    console.log(index+ " : "+fruit )
+})
